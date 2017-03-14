@@ -59,11 +59,13 @@
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
             console.log(Cookies.get('vpf-loaded'));
-            if (!Cookies.get('vpf-loaded')) {
-                $state.go('loading');
-            } else {
-                $state.go('hello');
-            }
+            $state.go('loading');
+
+            // if (!Cookies.get('vpf-loaded')) {
+            //     $state.go('loading');
+            // } else {
+            //     $state.go('hello');
+            // }
         }
     ]);
     // App Config
@@ -106,7 +108,7 @@
                                     e = window.event;
                                 }
                                 $('#filmleader').remove();
-                                Cookies.set('vpf-loaded', true);
+                                //Cookies.set('vpf-loaded', true);
                                 $state.transitionTo('hello');
                             };
 
