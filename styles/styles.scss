@@ -1,0 +1,27 @@
+﻿html, body {
+    background-color: black;
+    color: white;
+    font-family: 'raleway','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: orangered;
+    font-family: "utopia-std-headline", serif;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@import "loading";
+@import "hello";
+@import "menu";
+@import "about";

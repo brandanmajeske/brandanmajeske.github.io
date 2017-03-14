@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" ng-app="gunslinger">
 <!--<![endif]-->
 
 <head>
@@ -12,6 +12,8 @@
     <title>Vintage Pixel Foundry - Digital Creative - Boise, Idaho</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script type="text/javascript">
         window.rootPath = "/";
@@ -62,10 +64,41 @@
     </script>
 </head>
 
-<body style="background-color: black">
+<body>
     <div class="container">
-        <h1 style="color: orangered">Some Header</h1>
+        <img class="menu-icon" src="images/menu.png" alt="menu" />
+        <ui-view></ui-view>
     </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="scripts/lib/fastclick/fastclick.min.js"></script>
+    <script src="scripts/lib/preload/preload.min.js"></script>
+    <script src="scripts/lib/cookie/jscookie.min.js"></script>
+    <!-- animation -->
+    <script src="scripts/lib/greensock/AttrPlugin.js"></script>
+    <script src="scripts/lib/greensock/BezierPlugin.js"></script>
+    <script src="scripts/lib/greensock/ColorPropsPlugin.js"></script>
+    <script src="scripts/lib/greensock/CSSPlugin.js"></script>
+    <script src="scripts/lib/greensock/CSSRulePlugin.js"></script>
+    <script src="scripts/lib/greensock/DirectionalRotationPlugin.js"></script>
+    <script src="scripts/lib/greensock/EaselPlugin.js"></script>
+    <script src="scripts/lib/greensock/Physics2DPlugin.js"></script>
+    <script src="scripts/lib/greensock/RaphaelPlugin.js"></script>
+    <script src="scripts/lib/greensock/RoundPropsPlugin.js"></script>
+    <script src="scripts/lib/greensock/ScrambleTextPlugin.js"></script>
+    <script src="scripts/lib/greensock/ScrollToPlugin.js"></script>
+    <script src="scripts/lib/greensock/TextPlugin.js"></script>
+    <script src="scripts/lib/greensock/ThrowPropsPlugin.js"></script>
+    <!-- angular -->
+    <script src="scripts/lib/angular/angular.min.js"></script>
+    <script src="scripts/lib/angular/angular-ui-router.min.js"></script>
+    <script src="scripts/lib/angular/angular-animate.min.js"></script>
+    <!-- app -->
+    <script src="scripts/app/app.js"></script>
+    <script src="scripts/app/hello/helloController.js"></script>
+    <script src="scripts/oldwest/harmonica.js"></script>
+
 </body>
 
 </html>

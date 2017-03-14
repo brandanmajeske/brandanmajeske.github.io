@@ -1,0 +1,55 @@
+﻿@import "mixins";
+
+.about-vpf {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 100%;
+     transform: translate(-50%, -60%);
+     text-align: center;
+     
+     @include breakpoint(medium) {
+         width: 90%;
+     }
+     
+
+     h1, p#msg1 {
+         color: antiquewhite;
+         opacity: 0;
+         font-size: 30pt;
+         font-family: "Utopia-Std-Headline", sans-serif;
+
+        @include breakpoint(large) {
+            font-size: 26pt;
+        }
+            @include breakpoint(medium) {
+            font-size: 24pt;
+        }
+        @include breakpoint(small) {
+            font-size: 20pt;
+        }
+     }
+     p#msg2, p#workMsg {
+         opacity: 0;
+         color: antiquewhite;
+         font-size: 20pt;
+
+        @include breakpoint(large) {
+            font-size: 18pt;
+        }
+            @include breakpoint(medium) {
+            font-size: 16pt;
+        }
+        @include breakpoint(small) {
+            font-size: 12pt;
+        }
+     }
+
+}
+
+.work-vpf {
+    @extend .about-vpf;
+    h1, h2 {
+        opacity: 1;
+    }
+}

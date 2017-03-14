@@ -1,0 +1,450 @@
+﻿html, body {
+  background-color: black;
+  color: white;
+  font-family: 'raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 12pt;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  overflow: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: orangered;
+  font-family: "utopia-std-headline", serif;
+  text-transform: uppercase; }
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+#filmleader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important; }
+
+/*@mixin breakpoint($size) {
+    @if $size == xsmall {
+        @media only screen and (max-width: $break-xsmall) {
+            @content;
+        }
+    }
+    @else if $size == small {
+        @media only screen and (min-width: $break-xsmall + 1) and (max-width: $break-small - 1) {
+            @content;
+        }
+    }
+    @else if $size == medium {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+            @content;
+        }
+    }
+    @else if $size == large {
+        @media only screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+            @content;
+        }
+    } 
+    @else if $size == xlarge {
+        @media only screen and (min-width: $break-xlarge) {
+            @content;
+        }
+    }
+}*/
+/*Set a rem font size with pixel fallback*/
+/* useage 
+    p {
+        @include font-size(14px)
+    }
+*/
+/* Animations and Keyframes */
+/*usage
+
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+
+.object-to-animate {
+  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+} 
+*/
+/*
+    a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+*/
+/*
+    .container-with-floated-children {
+  @extend %clearfix;
+}
+*/
+/*Usage 
+
+<button class="mobile-navigation-trigger">
+  <b class="visually-hidden">Open the navigation</b>
+  <img src="img/mobile-navigation-icon.svg">
+</button>
+
+.visually-hidden {
+  @extend %visuallyhidden;
+}
+*/
+.landing {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  top: 0;
+  /* Header Height */
+  bottom: 0;
+  /* Footer Height */
+  overflow: hidden;
+  background: url(../images/landing2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+  .landing:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(215, 100, 200, 0.1); }
+  .landing .logo {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin: 0 -40%;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    max-height: 80%;
+    opacity: 0; }
+  .landing .circles {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    margin-left: -175px;
+    padding: 0;
+    list-style-type: none;
+    max-width: 500px;
+    text-align: center; }
+    @media (max-width: 768px) {
+      .landing .circles {
+        display: none; } }
+    @media (max-width: 320px) {
+      .landing .circles {
+        display: none; } }
+    @media (max-width: 200px) {
+      .landing .circles {
+        display: none; } }
+    @media (max-height: 800px) {
+      .landing .circles {
+        display: none; } }
+    .landing .circles li {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 0, 0, 0.125);
+      margin: 0 10px 0 10px;
+      border-radius: 50%; }
+
+.mod-touch .menu-icon {
+  opacity: 0.5 !important; }
+  .mod-touch .menu-icon:hover, .mod-touch .menu-icon:active {
+    opacity: 1 !important; }
+
+.mod-touch .landing {
+  background: url(../images/landing2.jpg) no-repeat center center fixed;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  width: 100%;
+  height: 100%; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .mod-touch .landing {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+      height: 100%; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .mod-touch .landing {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+      height: 100%; }
+      .mod-touch .landing .circles {
+        display: block; } }
+
+/*@mixin breakpoint($size) {
+    @if $size == xsmall {
+        @media only screen and (max-width: $break-xsmall) {
+            @content;
+        }
+    }
+    @else if $size == small {
+        @media only screen and (min-width: $break-xsmall + 1) and (max-width: $break-small - 1) {
+            @content;
+        }
+    }
+    @else if $size == medium {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+            @content;
+        }
+    }
+    @else if $size == large {
+        @media only screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+            @content;
+        }
+    } 
+    @else if $size == xlarge {
+        @media only screen and (min-width: $break-xlarge) {
+            @content;
+        }
+    }
+}*/
+/*Set a rem font size with pixel fallback*/
+/* useage 
+    p {
+        @include font-size(14px)
+    }
+*/
+/* Animations and Keyframes */
+/*usage
+
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+
+.object-to-animate {
+  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+} 
+*/
+/*
+    a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+*/
+/*
+    .container-with-floated-children {
+  @extend %clearfix;
+}
+*/
+/*Usage 
+
+<button class="mobile-navigation-trigger">
+  <b class="visually-hidden">Open the navigation</b>
+  <img src="img/mobile-navigation-icon.svg">
+</button>
+
+.visually-hidden {
+  @extend %visuallyhidden;
+}
+*/
+.menu-icon {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  opacity: 0;
+  cursor: pointer; }
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 62, 0, 0.75);
+  z-index: 100;
+  width: 100%;
+  height: 0;
+  opacity: 0; }
+  .menu .close-icon {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer; }
+  .menu .comingSoon {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    max-width: 1200px;
+    max-height: 200px;
+    transform: rotate(-23deg); }
+  .menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -60%); }
+    @media (max-width: 992px) {
+      .menu ul {
+        display: block; } }
+    .menu ul li {
+      margin: 1em;
+      display: inline-block; }
+      @media (max-width: 768px) {
+        .menu ul li {
+          display: block; } }
+      .menu ul li a {
+        font-size: 36pt;
+        font-weight: heavy;
+        font-family: 'Utopia-Std-Headline', sans-serif;
+        color: white;
+        text-shadow: 2px 4px 0 rgba(0, 0, 0, 0.5); }
+        .menu ul li a:hover, .menu ul li a:active, .menu ul li a:focus {
+          text-decoration: none; }
+        @media (max-width: 992px) {
+          .menu ul li a {
+            font-size: 28pt; } }
+        @media (max-width: 768px) {
+          .menu ul li a {
+            font-size: 26pt; } }
+        @media (max-width: 320px) {
+          .menu ul li a {
+            font-size: 18pt; } }
+
+.mod-touch .comingSoon {
+  margin-top: 10%; }
+
+/*@mixin breakpoint($size) {
+    @if $size == xsmall {
+        @media only screen and (max-width: $break-xsmall) {
+            @content;
+        }
+    }
+    @else if $size == small {
+        @media only screen and (min-width: $break-xsmall + 1) and (max-width: $break-small - 1) {
+            @content;
+        }
+    }
+    @else if $size == medium {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+            @content;
+        }
+    }
+    @else if $size == large {
+        @media only screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+            @content;
+        }
+    } 
+    @else if $size == xlarge {
+        @media only screen and (min-width: $break-xlarge) {
+            @content;
+        }
+    }
+}*/
+/*Set a rem font size with pixel fallback*/
+/* useage 
+    p {
+        @include font-size(14px)
+    }
+*/
+/* Animations and Keyframes */
+/*usage
+
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+
+.object-to-animate {
+  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+} 
+*/
+/*
+    a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+*/
+/*
+    .container-with-floated-children {
+  @extend %clearfix;
+}
+*/
+/*Usage 
+
+<button class="mobile-navigation-trigger">
+  <b class="visually-hidden">Open the navigation</b>
+  <img src="img/mobile-navigation-icon.svg">
+</button>
+
+.visually-hidden {
+  @extend %visuallyhidden;
+}
+*/
+.about-vpf, .work-vpf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -60%);
+  text-align: center; }
+  @media (max-width: 768px) {
+    .about-vpf, .work-vpf {
+      width: 90%; } }
+  .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
+    color: antiquewhite;
+    opacity: 0;
+    font-size: 30pt;
+    font-family: "Utopia-Std-Headline", sans-serif; }
+    @media (max-width: 992px) {
+      .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
+        font-size: 26pt; } }
+    @media (max-width: 768px) {
+      .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
+        font-size: 24pt; } }
+    @media (max-width: 320px) {
+      .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
+        font-size: 20pt; } }
+  .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
+    opacity: 0;
+    color: antiquewhite;
+    font-size: 20pt; }
+    @media (max-width: 992px) {
+      .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
+        font-size: 18pt; } }
+    @media (max-width: 768px) {
+      .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
+        font-size: 16pt; } }
+    @media (max-width: 320px) {
+      .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
+        font-size: 12pt; } }
+
+.work-vpf h1, .work-vpf h2 {
+  opacity: 1; }
+
+/*# sourceMappingURL=styles.css.map */

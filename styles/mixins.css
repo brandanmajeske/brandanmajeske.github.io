@@ -1,0 +1,71 @@
+﻿/*@mixin breakpoint($size) {
+    @if $size == xsmall {
+        @media only screen and (max-width: $break-xsmall) {
+            @content;
+        }
+    }
+    @else if $size == small {
+        @media only screen and (min-width: $break-xsmall + 1) and (max-width: $break-small - 1) {
+            @content;
+        }
+    }
+    @else if $size == medium {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+            @content;
+        }
+    }
+    @else if $size == large {
+        @media only screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+            @content;
+        }
+    } 
+    @else if $size == xlarge {
+        @media only screen and (min-width: $break-xlarge) {
+            @content;
+        }
+    }
+}*/
+/*Set a rem font size with pixel fallback*/
+/* useage 
+    p {
+        @include font-size(14px)
+    }
+*/
+/* Animations and Keyframes */
+/*usage
+
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+
+.object-to-animate {
+  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+} 
+*/
+/*
+    a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+*/
+/*
+    .container-with-floated-children {
+  @extend %clearfix;
+}
+*/
+/*Usage 
+
+<button class="mobile-navigation-trigger">
+  <b class="visually-hidden">Open the navigation</b>
+  <img src="img/mobile-navigation-icon.svg">
+</button>
+
+.visually-hidden {
+  @extend %visuallyhidden;
+}
+*/
+/*# sourceMappingURL=mixins.css.map */
