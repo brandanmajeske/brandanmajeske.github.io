@@ -75,7 +75,7 @@
             $httpProvider.defaults.withCredentials = true;
             $httpProvider.interceptors.push(interceptor);
             var templatePath = 'scripts/app/';
-            $locationProvider.html5Mode(true);
+            // $locationProvider.html5Mode(true);
 
 
             // state/routes
@@ -126,7 +126,7 @@
 
                         } else {
                             $('#filmleader').remove();
-                            Cookies.set('vpf-loaded', true);
+                            //Cookies.set('vpf-loaded', true);
                             $state.transitionTo('hello');
                         }
                     }
