@@ -21,6 +21,27 @@ h1,h2,h3,h4,h5,h6 {
     overflow: hidden;
 }
 
+#start-button {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 125px);
+    border: none;
+    padding: 20px;
+    width: 250px;
+    z-index: 9999!important;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
+    background-color: orangered;
+    border: 1px solid whitesmoke;
+    filter: drop-shadow(3px  5px 2px rgba(37, 16, 1, 0.5));
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    visibility: none;
+}
+
 @import "loading";
 @import "hello";
 @import "menu";

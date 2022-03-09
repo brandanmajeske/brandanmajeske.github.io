@@ -1,1 +1,9 @@
-﻿{"version":3,"file":"mixins.css","sources":["mixins.scss"],"sourcesContent":[],"mappings":"","names":[]}
+{
+    "version": 3,
+    "mappings": "AAMA;;;;;;;;;;;;;;;;;;;;;;;;;;GA0BG;AA8CH,2CAA2C;AAY3C;;;;EAIE;AAGF,8BAA8B;AAqC9B;;;;;;;;;;EAUE;AAWF;;;;;;;;EAQE;AAqBF;;;;EAIE;AAaF;;;;;;;;;;EAUE",
+    "sources": [
+        "mixins.scss"
+    ],
+    "names": [],
+    "file": "mixins.css"
+}

@@ -210,7 +210,7 @@
 
         window.Work = function () {
             var workMsg = document.getElementById("workMsg");
-            var msg = "We\'re currently currating our best work to present here. Please check back later."
+            var msg = "Gone Fishing"
             TweenLite.set(workMsg, { opacity: 0 });
             TweenLite.to(workMsg, 2, { opacity: 1, scrambleText: { text: msg, chars: "010101", revealDelay: 0.5, speed: 0.2 } });
         };

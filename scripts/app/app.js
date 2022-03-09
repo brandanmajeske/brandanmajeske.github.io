@@ -76,7 +76,7 @@
             $httpProvider.interceptors.push(interceptor);
             var templatePath = 'scripts/app/';
             // $locationProvider.html5Mode(true);
-
+            var startButton = $('#start-button');
 
             // state/routes
             $urlRouterProvider.otherwise("hello");
@@ -111,12 +111,19 @@
                             };
 
                             function handleFileComplete(event) {
+                               
                                 var loading = $('.loading');
+                                $(startButton).css("visibility", "visible");
                                 $(loading).append(event.result);
                                 $(loading).find('video').attr('id', 'filmleader');
-                                $('#filmleader').get(0).play();
-                                $('#filmleader').bind('playing', startHandler);
-                                $('#filmleader').bind('ended', endedHandler);
+                                $(startButton).click(function() {
+                                    $(startButton).css("visibility", "invisible");
+                                    this.remove();
+                                    $('#filmleader').get(0).play();
+                                    $('#filmleader').bind('playing', startHandler);
+                                    $('#filmleader').bind('ended', endedHandler);
+                                });
+                                
                             };
 
 
@@ -140,6 +147,9 @@
                         }
                     },
                     onEnter: function($state, $timeout) {
+                        if(startButton){
+                            startButton.remove();
+                        }
 
                         if (!Cookies.get('vpf-loaded')) {
                             $state.go('loading');
@@ -160,10 +170,12 @@
                                 $scope.msg1 = "";
                                 $scope.msg2 = "We make nice things for the web, mobile and print.";
                             }
-                        }
+                        },
                     },
                     onEnter: function($state, $timeout) {
-
+                        if(startButton){
+                            startButton.remove();
+                        }
                         if (!Cookies.get('vpf-loaded')) {
                             $state.go('loading');
                         } else {
@@ -185,7 +197,9 @@
                         }
                     },
                     onEnter: function($state, $timeout) {
-
+                        if(startButton){
+                            startButton.remove();
+                        }
                         if (!Cookies.get('vpf-loaded')) {
                             $state.go('loading');
                         } else {
@@ -207,7 +221,9 @@
                         }
                     },
                     onEnter: function($state, $timeout) {
-
+                        if(startButton){
+                            startButton.remove();
+                        }
                         if (!Cookies.get('vpf-loaded')) {
                             $state.go('loading');
                         } else {
@@ -228,7 +244,9 @@
                         }
                     },
                     onEnter: function($state, $timeout) {
-
+                        if(startButton){
+                            startButton.remove();
+                        }
                         if (!Cookies.get('vpf-loaded')) {
                             $state.go('loading');
                         } else {

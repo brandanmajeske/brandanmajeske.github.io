@@ -1,4 +1,4 @@
-﻿/*@mixin breakpoint($size) {
+/*@mixin breakpoint($size) {
     @if $size == xsmall {
         @media only screen and (max-width: $break-xsmall) {
             @content;
@@ -73,40 +73,67 @@
   top: 50%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -60%);
-  text-align: center; }
-  @media (max-width: 768px) {
-    .about-vpf, .work-vpf {
-      width: 90%; } }
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about-vpf, .work-vpf {
+    width: 90%;
+  }
+}
+
+.about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
+  color: antiquewhite;
+  opacity: 0;
+  font-size: 30pt;
+  font-family: "Utopia-Std-Headline", sans-serif;
+}
+
+@media (max-width: 992px) {
   .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
-    color: antiquewhite;
-    opacity: 0;
-    font-size: 30pt;
-    font-family: "Utopia-Std-Headline", sans-serif; }
-    @media (max-width: 992px) {
-      .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
-        font-size: 26pt; } }
-    @media (max-width: 768px) {
-      .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
-        font-size: 24pt; } }
-    @media (max-width: 320px) {
-      .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
-        font-size: 20pt; } }
+    font-size: 26pt;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
+    font-size: 24pt;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-vpf h1, .work-vpf h1, .about-vpf p#msg1, .work-vpf p#msg1 {
+    font-size: 20pt;
+  }
+}
+
+.about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
+  opacity: 0;
+  color: antiquewhite;
+  font-size: 20pt;
+}
+
+@media (max-width: 992px) {
   .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
-    opacity: 0;
-    color: antiquewhite;
-    font-size: 20pt; }
-    @media (max-width: 992px) {
-      .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
-        font-size: 18pt; } }
-    @media (max-width: 768px) {
-      .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
-        font-size: 16pt; } }
-    @media (max-width: 320px) {
-      .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
-        font-size: 12pt; } }
+    font-size: 18pt;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
+    font-size: 16pt;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-vpf p#msg2, .work-vpf p#msg2, .about-vpf p#workMsg, .work-vpf p#workMsg {
+    font-size: 12pt;
+  }
+}
 
 .work-vpf h1, .work-vpf h2 {
-  opacity: 1; }
-
+  opacity: 1;
+}
 /*# sourceMappingURL=about.css.map */
